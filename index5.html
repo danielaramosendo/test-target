@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversão de String</title>
+    <script>
+        function inverterString(s) {
+            let resultado = "";
+            for (let i = s.length - 1; i >= 0; i--) {
+                resultado += s[i];
+            }
+            return resultado;
+        }
+
+        function inverter() {
+            let string = prompt("Digite um nome: ");
+            
+            if (string === null || string === "") {
+                alert("Por favor, digite um nome válido.");
+                return;
+            }
+
+            let stringInvertida = inverterString(string);
+            alert("Nome invertido: " + stringInvertida);
+        }
+    </script>
+</head>
+<body>
+    <h1>Inversão de String</h1>
+    <button onclick="inverter()">Inverter String</button>
+</body>
+</html>
